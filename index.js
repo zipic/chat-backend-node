@@ -1,7 +1,7 @@
 const server = require('./app');
 const sequelize = require('./db/connection');
 const express = require('express');
-const PORT = process.env.PORT || 3005;
+const PORT = 18844 || 3005;
 
 const app = express();
 
