@@ -1,15 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const bodyParser = require('body-parser');
-const cors = require('cors');
 const User = require('../model/Users');
 
 router.use(bodyParser.json());
-
-router.use(cors({
-  origin: 'https://chat-backend-node.vercel.app',
-  credentials: true,
-}));
 
 
 router.post('/', async (req, res) => {
