@@ -56,4 +56,9 @@ router.get('/chat', async(req, res) => {
   }
 });
 
+router.use(cors({
+  origin: 'http://localhost:3000',
+  credentials: true,
+}));
+
 module.exports = router;
