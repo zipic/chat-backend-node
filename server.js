@@ -5,7 +5,6 @@ const PORT = process.env.PORT || 3005;
 
 const app = express();
 
-// Додаємо middleware для обробки JSON та urlencoded даних
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

@@ -1,17 +1,9 @@
-// const {Sequelize} = require('sequelize');
+const {Sequelize} = require('sequelize');
 
-// const sequelize = new Sequelize('chat', 'postgres', '//123456789', {
-//   host: 'localhost',
-//   dialect: 'postgres'
-// });
-
-// module.exports = sequelize;
-
-const { Sequelize } = require('sequelize');
-
-const sequelize = new Sequelize(process.env.POSTGRES_URL, {
-  dialect: 'postgres',
-  logging: false,
+const sequelize = new Sequelize('defaultdb', 'avnadmin', 'AVNS_lbpjzWKBqfsexuuHiv6', {
+  host: 'mysql-a24bd1-zpc23041988-7a1c.a.aivencloud.com',
+  dialect: 'mysql',
+  port: 18844
 });
 
 module.exports = sequelize;
