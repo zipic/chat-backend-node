@@ -6,7 +6,11 @@ const User = require('../model/Users');
 
 router.use(bodyParser.json());
 
-router.use(cors);
+router.use(cors({
+  origin: 'https://chat-backend-node.vercel.app',
+  credentials: true,
+}));
+
 
 router.post('/', async (req, res) => {
   const { name } = req.body;
@@ -55,10 +59,5 @@ router.get('/chat', async(req, res) => {
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
-
-router.use(cors({
-  origin: 'http://localhost:3000',
-  credentials: true,
-}));
 
 module.exports = router;
